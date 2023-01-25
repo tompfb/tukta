@@ -1,4 +1,4 @@
-<?php
+<!-- < ?php
 include "conn/connect.php";
 @$key_search = $_GET["s"];
 if ($key_search) {
@@ -8,9 +8,9 @@ if ($key_search) {
     $sql = "SELECT * FROM articles ORDER BY id DESC LIMIT 0,6 ";
     $q = mysqli_query($conn, $sql) or die("Error in query: $sql " . mysqli_error($conn));
 }
-?>
+?> --> 
 
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="th">
 
 <head>
@@ -170,9 +170,9 @@ if ($key_search) {
                         <div class="box_nav">
                             <a href="./">หน้าแรก</a>
                             <a href="">ร้านค้า</a>
-                            <a href="">วิธีการชื้อสินค้า</a>
-                            <a href="">วิธีชำระเงิน</a>
-                            <a href="">แจ้งชำระเงิน</a>
+                            <a href="./how-to-buy/">วิธีการชื้อสินค้า</a>
+                            <a href="./payment-method/">วิธีชำระเงิน</a>
+                            <a href="./payment-notification/">แจ้งชำระเงิน</a>
                             <a href="">บทความ</a>
                         </div>
                     </div>
@@ -268,14 +268,20 @@ if ($key_search) {
                     <ul class="ul-link">
                         <li><a href="./">หน้าแรก</a></li>
                         <li><a href="">ร้านค้า</a></li>
-                        <li><a href="">วิธีการชื้อสินค้า</a></li>
-                        <li><a href="">วิธีชำระเงิน</a></li>
-                        <li><a href="">แจ้งชำระเงิน</a></li>
+                        <li><a href="./how-to-buy/">วิธีการชื้อสินค้า</a></li>
+                        <li><a href="./payment-method/">วิธีชำระเงิน</a></li>
+                        <li><a href="./payment-notification/">แจ้งชำระเงิน</a></li>
                         <li><a href="">บทความ</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
                     <h3 class="text-footer">Social</h3>
+                    <div class="d-block mb-2">
+                        <a href="" class="d-inline-block"><img data-src="./img/icon/fb.webp" class="lazy img-fluid" width="42" height="40" alt="icon facebook"></a>
+                        <a href="" class="d-inline-block"><img data-src="./img/icon/line.webp" class="lazy img-fluid" width="42" height="40" alt="icon line"></a>
+                        <a href="" class="d-inline-block"><img data-src="./img/icon/ig.webp" class="lazy img-fluid" width="42" height="40" alt="icon instagram"></a>
+                    </div>
+                    <p class="des-footer">Tel : 088-0877288 , <br>089-7947809</p>
                 </div>
                 <div class="col-lg-2">
                     <a href="" class="log_back">Login</a>
