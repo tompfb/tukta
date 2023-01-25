@@ -52,33 +52,33 @@ p {
   color: #000000;
 }
 p strong {
-  color: #0008ff;
+  color: #ff0000;
 }
 p strong em {
-  color: #0008ff;
+  color: #ff0000;
 }
 p strong a {
-  color: #0008ff;
+  color: #ff0000;
   text-decoration: underline;
 }
 p strong a:hover {
-  color: #0008ff;
+  color: #ff0000;
   opacity: 0.6;
   transition: 0.3s;
 }
 p a {
   text-decoration: underline;
-  color: #0008ff;
+  color: #ff0000;
 }
 p a:hover {
   opacity: 0.6;
   transition: 0.3s;
 }
 p em {
-  color: #0008ff;
+  color: #ff0000;
 }
 p u {
-  color: #0008ff;
+  color: #ff0000;
 }
 .white {
   color: #ffffff !important;
