@@ -52,33 +52,33 @@ p {
   color: #000000;
 }
 p strong {
-  color: #ff2300;
+  color: #0008ff;
 }
 p strong em {
-  color: #ff2300;
+  color: #0008ff;
 }
 p strong a {
-  color: #ff2300;
+  color: #0008ff;
   text-decoration: underline;
 }
 p strong a:hover {
-  color: #ff2300;
+  color: #0008ff;
   opacity: 0.6;
   transition: 0.3s;
 }
 p a {
   text-decoration: underline;
-  color: #ff2300;
+  color: #0008ff;
 }
 p a:hover {
   opacity: 0.6;
   transition: 0.3s;
 }
 p em {
-  color: #ff2300;
+  color: #0008ff;
 }
 p u {
-  color: #ff2300;
+  color: #0008ff;
 }
 .white {
   color: #ffffff !important;
@@ -273,14 +273,53 @@ p u {
 .box_side .card-tags {
   border-top: 3px solid #ffffff;
 }
-.box_side h4{
+.box_side h4 {
   color: #d3658a !important;
 }
-.main-content{
+.main-content {
   padding: 10px 40px;
 }
-.heading-text{
+.heading-text {
   display: flex;
   align-items: center;
-  color:#a4224e ;
+  color: #a4224e;
+}
+.pink_content {
+  padding: 20px !important;
+  border-radius: 50px;
+  background-color: #fc8cb2;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 10px #b1b1b1;
+}
+.site-footer {
+  padding: 20px 0;
+  background-color: #fddde8;
+}
+.text-footer {
+  font-weight: 700;
+  color: #a1244e;
+  margin: 10px 0;
+}
+.des-footer {
+  color: #a3214d;
+  margin-bottom: 0px !important;
+  padding-right: 20px;
+}
+.ul-link {
+  list-style: none;
+}
+.ul-link li {
+  display: block;
+}
+.ul-link li a {
+  color: #a3214d;
+  font-weight: 500 !important;
+  font-size: 18px !important;
+}
+.ul-link li a:hover {
+  text-shadow: 1px 1px 1px #000000;
+  transition: 0.2s ease-in-out;
+}
+.log_back{
+  margin: 10px 0;
 }
