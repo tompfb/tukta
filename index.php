@@ -8,9 +8,9 @@ if ($key_search) {
     $sql = "SELECT * FROM articles ORDER BY id DESC LIMIT 0,6 ";
     $q = mysqli_query($conn, $sql) or die("Error in query: $sql " . mysqli_error($conn));
 }
-?> --> 
+?> -->
 
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="th">
 
 <head>
@@ -234,6 +234,9 @@ if ($key_search) {
                         <div class="col-sm-12 col-md-6 col-lg-3 my-2 text-center">
                             <img data-src="./img/img-tukta-09.webp" class="lazy img-fluid" width="309" height="303" alt="img doll">
                         </div>
+                    </div>
+                    <div class="vedio-wrepper">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/B8QcJx_Ykhw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     <div class="sub-heading my-3">
                         <h2 class="heading-text"><img data-src="./img/icon-text.webp" class="lazy img-fluid " width="72" height="72" alt="icontext"> ตุ๊กตาหมีตัวใหญ่</h2>

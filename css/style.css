@@ -351,3 +351,13 @@ p u {
   box-shadow: 0 0 12px #ffb100;
   transition: 0.3s ease-in-out;
 }
+.vedio-wrepper {
+  display: block;
+  text-align: center;
+  margin: 20px 0 !important;
+  background-image: linear-gradient(to right, #fc8cb2, #d2386a);
+  border: 10px solid #ecdae6;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #ffffff;
+  overflow: hidden;
+}
