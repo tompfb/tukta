@@ -169,7 +169,7 @@ if ($key_search) {
                     <div class="col-lg-9">
                         <div class="box_nav">
                             <a href="./">หน้าแรก</a>
-                            <a href="">ร้านค้า</a>
+                            <a href="./store/">ร้านค้า</a>
                             <a href="./how-to-buy/">วิธีการชื้อสินค้า</a>
                             <a href="./payment-method/">วิธีชำระเงิน</a>
                             <a href="./payment-notification/">แจ้งชำระเงิน</a>
@@ -187,13 +187,48 @@ if ($key_search) {
                 <div class="col-lg-3 position-relative setoder-one">
                     <div class="box_side">
                         <div class="card-cate px-2">
-                            <h4 class="text-center">หมวดหมู่</h4>
+                            <h3 class="text-center">หมวดหมู่</h3>
+                            <div class="box-category">
+                                <a href="./store/">ทั้งหมด</a>
+                                <?php
+                                include("./conn/connect.php");
+                                $sql_cate = "SELECT tb_product.Product_category,tb_category.category_url,COUNT(*) FROM tb_product INNER JOIN tb_category ON tb_product.Product_category=tb_category.c_name WHERE tb_product.Product_category = tb_category.c_name GROUP BY tb_category.c_sequence";
+                                $doll_cate = mysqli_query($conn, $sql_cate) or die("Error in query: $sql_cate " . mysqli_error($conn));
+                                while ($result_cate = mysqli_fetch_array($doll_cate)) {
+                                    $namecate = $result_cate['Product_category'];
+                                ?>
+                                    <a href=""><?php echo $namecate; ?><span class="count">
+                                            <?php echo $result_cate['COUNT(*)']; ?>
+                                        </span></a>
+                                <?php } ?>
+                            </div>
                         </div>
                         <div class="card-new px-2">
-                            <h4 class="text-center">หัวข้อใหม่</h4>
+                            <h3 class="text-center">หัวข้อใหม่</h3>
+                            <div class="box-article-index">
+                                <?php
+                                $sql = "SELECT * FROM tb_article 
+                                   ORDER BY Article_id DESC  LIMIT 0,5 ";
+                                $q = mysqli_query($conn, $sql) or die("Error in query: $sql " . mysqli_error($conn));
+                                while ($resuret = mysqli_fetch_array($q)) {
+                                    $topicname = $resuret['Article_title'];
+                                ?>
+                                    <a href=""><?php echo $topicname; ?></a>
+                                <?php } ?>
+                            </div>
                         </div>
                         <div class="card-tags px-2">
-                            <h4 class="text-center">Tags</h4>
+                            <h3 class="text-center">Tags</h3>
+                            <div class="box-category-all">
+                                <?php
+                                $sql_tag = "SELECT * FROM tag ";
+                                $q_tag = mysqli_query($conn, $sql_tag) or die("Error in query: $sql_tag " . mysqli_error($conn));
+                                while ($result_tag = mysqli_fetch_array($q_tag)) {
+                                    $tagsname = $result_tag['Tag_name'];
+                                ?>
+                                    <a href=""><?php echo $tagsname; ?></a>
+                                <?php } ?>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -270,7 +305,7 @@ if ($key_search) {
                     <h3 class="text-footer">Help us</h3>
                     <ul class="ul-link">
                         <li><a href="./">หน้าแรก</a></li>
-                        <li><a href="">ร้านค้า</a></li>
+                        <li><a href="./store/">ร้านค้า</a></li>
                         <li><a href="./how-to-buy/">วิธีการชื้อสินค้า</a></li>
                         <li><a href="./payment-method/">วิธีชำระเงิน</a></li>
                         <li><a href="./payment-notification/">แจ้งชำระเงิน</a></li>
@@ -280,9 +315,9 @@ if ($key_search) {
                 <div class="col-lg-3">
                     <h3 class="text-footer">Social</h3>
                     <div class="d-block mb-2">
-                        <a href="" class="d-inline-block"><img data-src="./img/icon/fb.webp" class="lazy img-fluid" width="42" height="40" alt="icon facebook"></a>
-                        <a href="" class="d-inline-block"><img data-src="./img/icon/line.webp" class="lazy img-fluid" width="42" height="40" alt="icon line"></a>
-                        <a href="" class="d-inline-block"><img data-src="./img/icon/ig.webp" class="lazy img-fluid" width="42" height="40" alt="icon instagram"></a>
+                        <a href="https://www.facebook.com/dollytopfy" class="d-inline-block"><img data-src="./img/icon/fb.webp" class="lazy img-fluid" width="42" height="40" alt="icon facebook"></a>
+                        <a href="https://line.me/ti/p/~yimyam888" class="d-inline-block"><img data-src="./img/icon/line.webp" class="lazy img-fluid" width="42" height="40" alt="icon line"></a>
+                        <a href="https://www.instagram.com/yimyam.dollhouse/" class="d-inline-block"><img data-src="./img/icon/ig.webp" class="lazy img-fluid" width="42" height="40" alt="icon instagram"></a>
                     </div>
                     <p class="des-footer">Tel : 088-0877288 , <br>089-7947809</p>
                 </div>

@@ -9,7 +9,7 @@
                 <h3 class="text-footer">Help us</h3>
                 <ul class="ul-link">
                     <li><a href="../">หน้าแรก</a></li>
-                    <li><a href="">ร้านค้า</a></li>
+                    <li><a href="../store/">ร้านค้า</a></li>
                     <li><a href="../how-to-buy/">วิธีการชื้อสินค้า</a></li>
                     <li><a href="../payment-method/">วิธีชำระเงิน</a></li>
                     <li><a href="../payment-notification/">แจ้งชำระเงิน</a></li>
@@ -19,9 +19,9 @@
             <div class="col-lg-3">
                 <h3 class="text-footer">Social</h3>
                 <div class="d-block mb-2">
-                    <a href="" class="d-inline-block"><img data-src="../img/icon/fb.webp" class="lazy img-fluid" width="42" height="40" alt="icon facebook"></a>
-                    <a href="" class="d-inline-block"><img data-src="../img/icon/line.webp" class="lazy img-fluid" width="42" height="40" alt="icon line"></a>
-                    <a href="" class="d-inline-block"><img data-src="../img/icon/ig.webp" class="lazy img-fluid" width="42" height="40" alt="icon instagram"></a>
+                    <a href="https://www.facebook.com/dollytopfy" class="d-inline-block"><img data-src="../img/icon/fb.webp" class="lazy img-fluid" width="42" height="40" alt="icon facebook"></a>
+                    <a href="https://line.me/ti/p/~yimyam888" class="d-inline-block"><img data-src="../img/icon/line.webp" class="lazy img-fluid" width="42" height="40" alt="icon line"></a>
+                    <a href="https://www.instagram.com/yimyam.dollhouse/" class="d-inline-block"><img data-src="../img/icon/ig.webp" class="lazy img-fluid" width="42" height="40" alt="icon instagram"></a>
                 </div>
                 <p class="des-footer">Tel : 088-0877288 , <br>089-7947809</p>
             </div>
