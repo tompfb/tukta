@@ -1,0 +1,142 @@
+.card-title .icon-padding {
+  color: #000 !important;
+}
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  left: 230px;
+  right: 0;
+  z-index: 11;
+  height: 60px;
+  transition: all 0.2s ease;
+}
+.navbar-wrapper .navbar {
+  background-color: #202020;
+  height: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.navbar-wrapper .navbar .navbar-brand {
+  color: #f1f1f1;
+}
+.navbar-wrapper.collapsed {
+  left: 60px;
+}
+.sidebar-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 230px;
+  height: 100vh;
+  transition: all 0.2s ease;
+}
+.sidebar-wrapper .icon-padding {
+  padding: 0 10px 0 0;
+}
+.sidebar-wrapper .fab,
+.sidebar-wrapper .far,
+.sidebar-wrapper .fa,
+.sidebar-wrapper .fas {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.material-icons {
+  color: white;
+}
+
+li .menu-item .material-icons {
+  vertical-align: text-bottom !important;
+}
+li .menu-item {
+  margin: 10px 0;
+}
+
+.sidebar-wrapper .sidebar-header {
+  height: 60px;
+  background-color: #202020;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar-wrapper .sidebar-header a {
+  text-decoration: none;
+}
+.sidebar-wrapper .sidebar-menu {
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #252525;
+  color: #f1f1f1;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-wrapper.collapsed {
+  width: 60px;
+}
+.sidebar-wrapper.collapsed .menu-item {
+  text-align: center;
+}
+.sidebar-wrapper.collapsed .menu-item .menu-item-label {
+  display: none;
+}
+.page-wrapper {
+  height: 100vh;
+  padding-left: 230px;
+  padding-top: 60px;
+  transition: all 0.2s ease;
+}
+.page-wrapper .page-content {
+  padding: 1rem 1.5rem;
+  height: 100%;
+  overflow-y: auto;
+}
+.page-wrapper.collapsed {
+  padding-left: 60px;
+}
+.fa-chevron-left {
+  transition: all 0.2s ease;
+  transform: rotateY(0);
+}
+
+.menu-group {
+  list-style: none;
+  padding: 0;
+}
+.menu-group .menu-item {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.menu-group .menu-item:hover {
+  background-color: #383838;
+}
+.icon-toggle {
+  padding: 0.5rem 1rem;
+}
+.icon-toggle:hover {
+  background-color: #383838;
+}
+
+.collapsed .fa-chevron-left {
+  transform: rotateY(180deg);
+}
+
+.brand {
+  display: inline;
+}
+
+.collapsed .brand {
+  display: none;
+}
+
+.brand-colapse {
+  display: none;
+}
+
+.collapsed .brand-colapse {
+  display: inline;
+}

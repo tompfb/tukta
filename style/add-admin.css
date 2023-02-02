@@ -1,0 +1,129 @@
+li .menu-item .material-icons {
+  vertical-align: text-bottom !important;
+}
+li .menu-item {
+  margin: 10px 0;
+}
+.thead-light {
+  background-color: #e9ecef;
+  font-size: 18px;
+}
+.thead-light .btn-management {
+  text-align: center;
+}
+.table-admin {
+  font-size: 18px;
+  font-weight: normal;
+}
+.table-admin .owner-admin {
+  border: 1px solid #000;
+  border-radius: 8px;
+  background: #000;
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+}
+.table-admin .btn-management {
+  cursor: pointer;
+  text-align: center;
+}
+.table-admin .btn-management .ptext {
+  cursor: pointer;
+}
+.modal-header {
+  justify-content: center;
+  background-color: #f1f1f1;
+}
+.form-control {
+  height: 45px;
+  background-color: whitesmoke;
+  font-size: 17px;
+  border: solid 0px whitesmoke;
+  box-shadow: none;
+}
+.form-group {
+  margin-bottom: 15px;
+  display: grid;
+}
+.form-group .lb-fontw {
+  font-weight: normal;
+  font-size: 1rem;
+}
+.form-group .admini {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.modal-header {
+  padding: 6rem 1rem 1rem;
+  border: none;
+}
+
+@media (max-width: 767px) {
+  .modal.show .modal-dialog {
+    max-width: calc(100% - 8px) !important;
+  }
+}
+
+.modal.show .modal-dialog {
+  max-width: 30%;
+  transform: none;
+  top: 0;
+}
+
+.modal-title {
+  font-weight: bolder;
+  font-size: 10px;
+  color: gray;
+}
+
+.modal-body {
+  padding: 1rem 1rem;
+}
+
+.modal-footer {
+  padding: 3rem 0rem 5rem 0rem;
+  justify-content: flex-start;
+}
+
+input {
+  border: none;
+  padding: 0;
+  font-size: 41px;
+}
+
+.input-group-lg > .btn,
+.input-group-lg > .form-control,
+.input-group-lg > .form-select,
+.input-group-lg > .input-group-text {
+  padding: 0 1rem 0 1rem;
+  font-size: 41px;
+}
+.list-group {
+  flex-direction: row !important;
+}
+.list-group .list-group-item {
+  border: none;
+}
+.list-group .list-group-item a {
+  font-size: 16px;
+  color: #000;
+}
+.list-group .list-group-item a:hover {
+  color: #e45b5b;
+}
+
+.input-group {
+  height: 60px;
+}
+
+.search-icon {
+  font-size: 46px;
+  color: darkgray;
+  cursor: pointer;
+}
+
+.modal-header .btn-close {
+  padding: 0.5rem 0.5rem;
+  margin: -0.5rem 1.5rem -0.5rem auto;
+}

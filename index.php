@@ -1,160 +1,26 @@
-<!-- < ?php
-include "conn/connect.php";
-@$key_search = $_GET["s"];
-if ($key_search) {
-    $sql = "SELECT * FROM articles WHERE topic_name LIKE '%" . $key_search . "%' ";
-    $q = mysqli_query($conn, $sql) or die("Error in query: $sql " . mysqli_error($conn));
-} else {
-    $sql = "SELECT * FROM articles ORDER BY id DESC LIMIT 0,6 ";
-    $q = mysqli_query($conn, $sql) or die("Error in query: $sql " . mysqli_error($conn));
-}
-?> -->
-
 <!DOCTYPE html>
-<html lang="th">
+
+<html lang="en">
+
+
 
 <head>
-    <title>บ้านตุ๊กตายิ้มแย้ม</title>
-    <meta name="title" content="g2gbet168 คาสิโนออนไลน์ บาคาร่า มั่นคงที่สุดในไทย ฝาก ถอน ออโต้ เริ่มต้นเพียง 1 บาท " />
-    <meta name="description" content="g2gbet168 เว็บไซต์ของเรา คือผู้ให้บริการ เกมเดิมพันพนันออนไลน์ ครบวงจร ในเว็บไซต์จะมีเกมเดิมพันทุกรูปแบบ เปิดให้บริการ ไม่ว่าจะเป็นเกมเดิมพัน คาสิโนสด เดิมพันบาคาร่า เกมสล็อต เกมยิงปลา ลอตเตอรี่ บริการครบทุกรูปแบบ นอกจากนั้นยังโดดเด่น ในด้านการเสนอ ตลาดการเดิมพันกีฬา ที่ดีที่สุด" />
-
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta http-equiv="content-language" content="th" />
-    <meta http-equiv="content-type" content="text/html;" charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="robots" content="index,follow" />
-    <meta name="Author" content="g2gbet168 ">
-    <meta name="googlebots" content="all">
-    <meta name="audience" content="all">
-    <meta name="Rating" content="General">
-    <meta name="distribution" content="Global">
-    <meta name="allow-search" content="yes">
-
-    <meta property="og:locale" content="th_TH" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="g2gbet168 คาสิโนออนไลน์ บาคาร่า มั่นคงที่สุดในไทย ฝาก ถอน ออโต้ เริ่มต้นเพียง 1 บาท" />
-    <meta property="og:description" content="g2gbet168 เว็บไซต์ของเรา คือผู้ให้บริการ เกมเดิมพันพนันออนไลน์ ครบวงจร ในเว็บไซต์จะมีเกมเดิมพันทุกรูปแบบ เปิดให้บริการ ไม่ว่าจะเป็นเกมเดิมพัน คาสิโนสด เดิมพันบาคาร่า เกมสล็อต เกมยิงปลา ลอตเตอรี่ บริการครบทุกรูปแบบ นอกจากนั้นยังโดดเด่น ในด้านการเสนอ ตลาดการเดิมพันกีฬา ที่ดีที่สุด" />
-    <meta property="og:url" content="#/" />
-    <meta property="og:site_name" content="g2gbet" />
-    <meta property="og:image" content="./img/logo-g2gbet168.webp" />
-
-    <meta property="twitter:url" content="#/">
-    <meta property="twitter:image" content="./img/logo-g2gbet168.webp">
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="g2gbet168 คาสิโนออนไลน์ บาคาร่า มั่นคงที่สุดในไทย ฝาก ถอน ออโต้ เริ่มต้นเพียง 1 บาท" />
-    <meta name="twitter:description" content="g2gbet168 เว็บไซต์ของเรา คือผู้ให้บริการ เกมเดิมพันพนันออนไลน์ ครบวงจร ในเว็บไซต์จะมีเกมเดิมพันทุกรูปแบบ เปิดให้บริการ ไม่ว่าจะเป็นเกมเดิมพัน คาสิโนสด เดิมพันบาคาร่า เกมสล็อต เกมยิงปลา ลอตเตอรี่ บริการครบทุกรูปแบบ นอกจากนั้นยังโดดเด่น ในด้านการเสนอ ตลาดการเดิมพันกีฬา ที่ดีที่สุด" />
-    <meta name="twitter:site" content="g2gbet168">
-    <meta name="twitter:creator" content="g2gbet168">
-
-    <link rel="canonical" href="#/" />
-    <link rel="alternate" href="#/" hreflang="th-TH" />
-
-    <link rel="shortcut icon" href="./favicon.webp" type="image/x-icon" />
-    <link rel="icon" href="./favicon.webp" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="./favicon.webp" />
-
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "url": "#/",
-            "logo": "#/img/logo-g2gbet168.webp"
-        }
-    </script>
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org/",
-            "@type": "WebPage",
-            "name": "g2gbet168",
-            "speakable": {
-                "@type": "SpeakableSpecification",
-                "xPath": [
-                    "/html/head/title",
-                    "/html/head/meta[@name='description']/@content"
-                ]
-            },
-            "url": "#/"
-        }
-    </script>
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org/",
-            "@type": "WebSite",
-            "url": "#/",
-            "name": "g2gbet168",
-            "description": "g2gbet168 คาสิโนออนไลน์ บาคาร่า มั่นคงที่สุดในไทย",
-            "potentialAction": [{
-                "@type": "SearchAction",
-                "target": {
-                    "@type": "EntryPoint",
-                    "urlTemplate": "#/?s={search_term_string}"
-                },
-                "query-input": "required name=search_term_string"
-            }]
-        }
-    </script>
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [{
-                "@type": "ListItem",
-                "position": 1,
-                "name": "g2gbet168"
-            }]
-        }
-    </script>
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Store",
-            "image": [
-                "#/img/logo-g2gbet168.webp",
-                "#/img/g2gbet168img-01.webp",
-                "#/img/g2gbet168img-02.webp"
-            ],
-            "name": "g2gbet168",
-            "address": {
-                "@type": "PostalAddress",
-                "addressCountry": "TH"
-            },
-            "url": "#/",
-            "priceRange": "฿฿฿",
-            "telephone": "+6696-921-9245",
-            "openingHoursSpecification": [{
-                    "@type": "OpeningHoursSpecification",
-                    "dayOfWeek": [
-                        "Monday",
-                        "Tuesday",
-                        "Wednesday",
-                        "Thursday",
-                        "Friday",
-                        "Saturday"
-                    ],
-                    "opens": "08:00",
-                    "closes": "23:59"
-                },
-                {
-                    "@type": "OpeningHoursSpecification",
-                    "dayOfWeek": "Sunday",
-                    "opens": "08:00",
-                    "closes": "23:00"
-                }
-            ]
-
-        }
-    </script>
-    <style>
-        <?php
-        include('bootstrap/bootstrap.css');
-        include('css/style.css');
-        ?>
-    </style>
+    <title>บ้านตุ๊กตายิ้มแย้ม จำหน่าย ตุ๊กตาราคาถูก ทั้งขาย ปลีก ส่ง ตุ๊กตาน่ารักๆ จัดส่งฟรีทั่วประเทศ</title>
+    <meta name="description" content="บ้านตุ๊กตายิ้มแย้ม YIMYAM จำหน่าย ตุ๊กตาราคาถูก คิตตี้ หมีพู และอื่นๆอีกมากมาย ทั้งขาย ปลีก ส่ง ทั่วประเทศ" />
+    <meta http-equiv="content-language" content="th" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="7 days" />
+    <link rel="canonical" href="https://ตุ๊กตาราคาถูก.net/" />
+    <link rel="alternate" href="https://ตุ๊กตาราคาถูก.net/" hreflang="th-TH" />
+    <link rel="icon" href="assets/logo.ico" type="image/ico">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <?php include_once('assets/styles.html'); ?>
 </head>
+
+
 
 <body>
     <header class="site-header">
@@ -169,11 +35,11 @@ if ($key_search) {
                     <div class="col-lg-9">
                         <div class="box_nav">
                             <a href="./">หน้าแรก</a>
-                            <a href="./store/">ร้านค้า</a>
-                            <a href="./how-to-buy/">วิธีการชื้อสินค้า</a>
-                            <a href="./payment-method/">วิธีชำระเงิน</a>
-                            <a href="./payment-notification/">แจ้งชำระเงิน</a>
-                            <a href="">บทความ</a>
+                            <a href="./shop-page/category/all">ร้านค้า</a>
+                            <a href="./ht-order/">วิธีการชื้อสินค้า</a>
+                            <a href="./notice-of-payment/">วิธีชำระเงิน</a>
+                            <a href="./payment-method/">แจ้งชำระเงิน</a>
+                            <a href="./article/">บทความ</a>
                         </div>
                     </div>
                 </div>
@@ -189,7 +55,7 @@ if ($key_search) {
                         <div class="card-cate px-2">
                             <h3 class="text-center">หมวดหมู่</h3>
                             <div class="box-category">
-                                <a href="./store/">ทั้งหมด</a>
+                                <a href="./shop-page/">ทั้งหมด</a>
                                 <?php
                                 include("./conn/connect.php");
                                 $sql_cate = "SELECT tb_product.Product_category,tb_category.category_url,COUNT(*) FROM tb_product INNER JOIN tb_category ON tb_product.Product_category=tb_category.c_name WHERE tb_product.Product_category = tb_category.c_name GROUP BY tb_category.c_sequence";
@@ -197,7 +63,7 @@ if ($key_search) {
                                 while ($result_cate = mysqli_fetch_array($doll_cate)) {
                                     $namecate = $result_cate['Product_category'];
                                 ?>
-                                    <a href=""><?php echo $namecate; ?><span class="count">
+                                    <a href="./shop-page/category/<?php echo $result_cate['category_url'] ?>"><?php echo $namecate; ?><span class="count">
                                             <?php echo $result_cate['COUNT(*)']; ?>
                                         </span></a>
                                 <?php } ?>
@@ -213,7 +79,7 @@ if ($key_search) {
                                 while ($resuret = mysqli_fetch_array($q)) {
                                     $topicname = $resuret['Article_title'];
                                 ?>
-                                    <a href=""><?php echo $topicname; ?></a>
+                                    <a href="../read-article/<?php echo $resuret['Seo_url']; ?>"><?php echo $topicname; ?></a>
                                 <?php } ?>
                             </div>
                         </div>
@@ -226,7 +92,7 @@ if ($key_search) {
                                 while ($result_tag = mysqli_fetch_array($q_tag)) {
                                     $tagsname = $result_tag['Tag_name'];
                                 ?>
-                                    <a href=""><?php echo $tagsname; ?></a>
+                                    <a href="./shop-page/tag/<?php echo $result_tag['Tag_name']; ?>"><?php echo $tagsname; ?></a>
                                 <?php } ?>
                             </div>
                         </div>
@@ -305,11 +171,11 @@ if ($key_search) {
                     <h3 class="text-footer">Help us</h3>
                     <ul class="ul-link">
                         <li><a href="./">หน้าแรก</a></li>
-                        <li><a href="./store/">ร้านค้า</a></li>
-                        <li><a href="./how-to-buy/">วิธีการชื้อสินค้า</a></li>
-                        <li><a href="./payment-method/">วิธีชำระเงิน</a></li>
-                        <li><a href="./payment-notification/">แจ้งชำระเงิน</a></li>
-                        <li><a href="">บทความ</a></li>
+                        <li><a href="./shop-page/category/all">ร้านค้า</a></li>
+                        <li><a href="./ht-order/">วิธีการชื้อสินค้า</a></li>
+                        <li><a href="./notice-of-payment/">วิธีชำระเงิน</a></li>
+                        <li><a href="./payment-method/">แจ้งชำระเงิน</a></li>
+                        <li><a href="./article/">บทความ</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
@@ -322,73 +188,63 @@ if ($key_search) {
                     <p class="des-footer">Tel : 088-0877288 , <br>089-7947809</p>
                 </div>
                 <div class="col-lg-2">
-                    <a href="" class="log_back">Login</a>
+                    <a href="./login.php" class="log_back">Login</a>
                 </div>
             </div>
         </div>
     </footer>
+    <?php
+
+    include_once('assets/scripts.html');
+
+    ?>
+
+
+
     <script>
-        function openNav() {
-            document.getElementById("myNav").style.width = "80%";
-        }
+        var mybutton = document.getElementById("myBtn-backTotop");
 
-        function closeNav() {
-            document.getElementById("myNav").style.width = "0%";
-        }
-    </script>
-    <!-- start lazyload -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var lazyloadImages;
 
-            if ("IntersectionObserver" in window) {
-                lazyloadImages = document.querySelectorAll(".lazy");
-                var imageObserver = new IntersectionObserver(function(entries, observer) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                            var image = entry.target;
-                            image.src = image.dataset.src;
-                            image.classList.remove("lazy");
-                            imageObserver.unobserve(image);
-                        }
-                    });
-                });
 
-                lazyloadImages.forEach(function(image) {
-                    imageObserver.observe(image);
-                });
+        // When the user scrolls down 20px from the top of the document, show the button
+
+        window.onscroll = function() {
+
+            scrollFunction()
+
+        };
+
+
+
+        function scrollFunction() {
+
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+
+                mybutton.style.display = "block";
+
             } else {
-                var lazyloadThrottleTimeout;
-                lazyloadImages = document.querySelectorAll(".lazy");
 
-                function lazyload() {
-                    if (lazyloadThrottleTimeout) {
-                        clearTimeout(lazyloadThrottleTimeout);
-                    }
+                mybutton.style.display = "none";
 
-                    lazyloadThrottleTimeout = setTimeout(function() {
-                        var scrollTop = window.pageYOffset;
-                        lazyloadImages.forEach(function(img) {
-                            if (img.offsetTop < (window.innerHeight + scrollTop)) {
-                                img.src = img.dataset.src;
-                                img.classList.remove('lazy');
-                            }
-                        });
-                        if (lazyloadImages.length == 0) {
-                            document.removeEventListener("scroll", lazyload);
-                            window.removeEventListener("resize", lazyload);
-                            window.removeEventListener("orientationChange", lazyload);
-                        }
-                    }, 20);
-                }
-
-                document.addEventListener("scroll", lazyload);
-                window.addEventListener("resize", lazyload);
-                window.addEventListener("orientationChange", lazyload);
             }
-        })
+
+        }
+
+
+
+        // When the user clicks on the button, scroll to the top of the document
+
+        function topFunction() {
+
+            document.body.scrollTop = 0;
+
+            document.documentElement.scrollTop = 0;
+
+        }
     </script>
-    <!--end lazyload -->
+
 </body>
+
+
 
 </html>

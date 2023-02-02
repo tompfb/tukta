@@ -1,0 +1,11 @@
+.navbar-nav .nav-item .nav-link .fas {
+  display: none;
+}
+
+.navbar-nav .nav-item .nav-link span {
+  display: none;
+}
+
+.nav-link:hover {
+  color: rgb(228, 128, 128);
+}

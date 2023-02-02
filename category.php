@@ -1,173 +1,130 @@
-<?php
-include 'script-login.php';
-include './conn/connect.php';
-$category_name = $_GET["name"];
-
-?>
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title><?php echo $category_name;  ?></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="robots" content="index,follow" />
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="canonical" href="#/category/<?php echo $category_name; ?>" />
-    <link rel="alternate" href="#/category/<?php echo $category_name; ?>" hreflang="th-TH" />
-
-    <link rel="shortcut icon" href="../favicon.webp" type="image/x-icon" />
-    <link rel="icon" href="../favicon.webp" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="../favicon.webp" />
-
-    <?php include('./link.php'); ?>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [{
-                "@type": "ListItem",
-                "position": 1,
-                "name": "หน้าแรก",
-                "item": "#/"
-            }, {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "บทความทั้งหมด",
-                "item": "#/all-articles/"
-            }],
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "หมวดหมู่ <?php echo $category_name;  ?>"
-            }]
-        }
-    </script>
-
-</head>
-
-<body>
-    <?php include('./component/header.php'); ?>
-    <?php include('./about-head.php'); ?>
-    <section id="bread-crumbs">
-        <div class="container px-0">
-            <nav aria-label="breadcrumb " class="nav-breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="../">หน้าแรก</a></li>
-                    <li class="breadcrumb-item"><a href="../all-articles/">บทความทั้งหมด</a></li>
-                    <li class="breadcrumb-item active" aria-current="page" aria-disabled="page">หมวดหมู่ <?php echo $category_name;  ?></li>
-                </ol>
-            </nav>
-        </div>
-    </section>
-    <article class="viewcontainer">
-        <div class="container boxcontainer" style="min-height: 60vh;">
-            <h1 class="heading-text  text-center">
-                หมวดหมู่ : <?php echo $category_name; ?>
-            </h1>
-            <div id="loadtable">
-                <?php
-                $lastid = '';
-                include('./conn/connect.php');
-                $query = mysqli_query($conn, "SELECT * ,articles.id as id FROM articles LEFT join category on articles.category_id = category.id WHERE category.name ='$category_name' ORDER BY articles.id  asc limit 9"); ?>
-                <div class="row">
-                    <?php
-                    while ($row = mysqli_fetch_array($query)) {
-                        $article_id = $row['id'];
-                    ?>
-
-                        <div class="col-lg-4 col-md-6  col-sm-12">
-                            <div class="bg_articles my-2">
-                                <a href="../view/<?php echo $row['url_articles_seo']; ?>">
-                                    <figure class="news-articles-img">
-                                        <div class="bg-img">
-                                            <img class="lazy img-fluid" data-src="../backend/uploads/article-img/<?php echo $row['image_banner']; ?>" alt="<?php echo trim(strip_tags(mb_substr($row['topic_name'], 0, 30, 'utf-8'))); ?>" width="100%" height="100%">
-                                        </div>
-                                    </figure>
-                                    <div class="px-2">
-                                        <strong class="news-articles-h4"><?php echo trim(strip_tags(mb_substr($row['topic_name'], 0, 30, 'utf-8'))); ?></strong>
-                                        <div class="d-flex flex-column text-center view_date">
-                                            <span>
-                                                โพสเมื่อ : <?php echo date("Y-m-d", strtotime($row['create_at'])); ?>
-                                            </span>
-                                            <span>
-                                                ผู้เข้าชม : <?php echo $row['view']; ?>
-                                            </span>
-                                        </div>
-
-                                        <p class="news-articles-p "><?php echo trim(strip_tags(mb_substr($row['descripion_seo'], 0, 120, 'utf-8'))); ?></p>
-
-                                    </div>
-                                </a>
-                                <div class="card__footer">
-                                    <div class="user">
-                                        <div class="user__info">
-                                            <p>TEGS :</p>
-                                            <?php
-                                            $sql_tag = "SELECT tag.tag_url as tag_url,tag.name as name FROM (tag
-                                    left join tag_log on tag.id = tag_log.tag_id)
-                                    where articles_id = $article_id ";
-                                            $query_tag = mysqli_query($conn, $sql_tag) or die("Error in query: $sql " . mysqli_error($conn));
-                                            while ($result_tag = $query_tag->fetch_assoc()) {
-                                            ?>
-                                                <a href="../tag/<?php echo $result_tag['tag_url']; ?>" style="text-decoration: none;">
-                                                    <span class="tag tag-red"><?php echo $result_tag['name'] ?></span>
-                                                </a>
-                                            <?php } ?>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    <?php
-                        $lastid = $row['id'];
-                        $Ncategory =  $category_name;
-                    } ?>
-                </div>
-                <div id="remove">
-                    <div style="height:10px;"></div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <button type="button" name="loadmore" id="loadmore" data-id="<?php echo $lastid; ?>" data-cate="<?php echo $Ncategory; ?>" class="btn btn-primary">See More</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br><br>
-        </div>
-    </article>
-
-    <?php include('./component/footer.php'); ?>
-    <script>
-        $(document).ready(function() {
-            $(document).on("click", "#loadmore", function() {
-                var lastid = $(this).data("id");
-                var Ncategory = $(this).data("cate");
-                $("#loadmore").html("Loading...");
-                $.ajax({
-                    url: "../load_cate.php",
-                    method: "POST",
-                    data: {
-                        Ncategory: Ncategory,
-                        lastid: lastid,
-                    },
-                    dataType: "text",
-                    success: function(data) {
-                        if (data != "") {
-                            $("#remove").remove();
-                            $("#loadtable").append(data);
-                        } else {
-                            $("#loadmore").html("No more data to show");
-                        }
-                    },
-                });
-            });
-        });
-    </script>
-    <?php include('./import-js.php'); ?>
-</body>
-
+<?php
+session_start();
+if (!isset($_SESSION['username'])) {
+    $_SESSION['msg'] = "you should log in";
+    echo "you should log in";
+    header('location: login.php');
+}
+if (isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['username']);
+    header('location:login.php');
+}
+// echo $_SESSION['username'];
+
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products management</title>
+    <link rel="icon" href="assets/logo.ico" type="image/ico">
+    <link rel="stylesheet" type="text/css" href="style/products-management.css">
+    <link rel="stylesheet" type="text/css" href="style/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="style/category.css">
+
+    <?php include_once('assets/styles.html'); ?>
+    <style>
+        .form-select {
+            background-image: none !important;
+        }
+
+        input:disabled {
+            background: #dddddd;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <header>
+        <div class="navbar-wrapper" id="navbar-content">
+            <div class="navbar navbar-expand">
+                <a href="javascript:;" class="link-light" onclick="setSidebarCollapse()">
+                    <i class="fas fa-chevron-left"></i>
+                </a>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a href="javascript:;" class="nav-link dropdown-toggle link-light" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user"></i> บัญชี</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="index.php">หน้าแรก</a></li>
+                            <li><a class="dropdown-item" href="products-management.php?logout='1'">ออกจากระบบ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar-wrapper" id="sidebar-content">
+        <div class="sidebar-content">
+            <div class="sidebar-header">
+                <a href="javascript:;" class="sidebar-brand link-light">
+                    <span class="brand">Brandner</span>
+                    <span class="brand-collapsed">B</span>
+                </a>
+            </div>
+            <div class="sidebar-menu">
+                <div for="" class="menu-label"> </div>
+                <ul class="menu-group">
+                    <li> <a class="menu-item link-light" href="products-management.php">
+                            <i class="fas fa-chart-line icon-padding"></i>
+                            <span class="menu-item-label">แดชบอร์ด</span> </a>
+                    </li>
+                    <li> <a class="menu-item link-light" href="add-product.php">
+                            <i class="fab fa-reddit-alien icon-padding"></i>
+                            <span class="menu-item-label">จัดการสินค้า</span> </a>
+                    </li>
+                    <li> <a class="menu-item link-light" href="add-article.php">
+                            <span class="material-icons icon-sidebar icon-padding">
+                                feed
+                            </span>
+                            <span class="menu-item-label">จัดการบทความ</span> </a>
+                    </li>
+                    <li> <a class="menu-item link-light" href="tag.php">
+                            <span class="material-icons icon-sidebar icon-padding">
+                                tag
+                            </span>
+                            <span class="menu-item-label">แท็ก</span> </a>
+                    </li>
+                    <li> <a class="menu-item link-light" href="category.php">
+                            <i class="fas fa-layer-group  icon-padding"></i>
+                            <span class="menu-item-label">หมวดหมู่</span> </a>
+                    </li>
+                    <li> <a class="menu-item link-light" href="add-admin.php">
+                            <span class="material-icons icon-sidebar icon-padding">
+                                admin_panel_settings
+                            </span>
+                            <span class="menu-item-label">ผู้ดูแลระบบ</span> </a>
+                    </li>
+                </ul>
+                <div class="mt-auto text-end">
+                    <a href="javascript:;" class="icon-toggle link-light" onclick="setSidebarCollapse()">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-wrapper" id="page-content">
+        <div class="page-content">
+
+            <?php include_once('./components/add-categoty.php'); ?>
+
+        </div>
+    </div>
+
+    <?php include_once('assets/scripts.html'); ?>
+</body>
+
 </html>

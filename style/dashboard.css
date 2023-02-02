@@ -1,0 +1,44 @@
+.fab {
+  font-size: 40px;
+  color: black;
+}
+
+.material-icons {
+  font-size: 50px;
+  color: black;
+}
+
+.card-text {
+  margin-top: 15px;
+  margin-bottom: 1rem;
+  font-size: 37px;
+  color: gray;
+  font-weight: normal;
+}
+
+div > h5 {
+  font-size: 35px;
+  color: red;
+}
+
+div > span {
+  font-size: 20px;
+  margin-top: 10px;
+}
+.icon-dash {
+  font-size: 40px !important;
+  color: black !important;
+}
+.success {
+  color: #3c763d;
+  background: #dff9d8;
+  border: 1px solid #3c763d;
+  margin-bottom: 20px;
+  text-align: center;
+}
+li .menu-item .material-icons {
+  vertical-align: text-bottom !important;
+}
+li .menu-item {
+  margin: 10px 0;
+}

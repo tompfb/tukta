@@ -1,0 +1,204 @@
+.content-collapsed .card-product {
+  justify-content: center !important;
+}
+
+.content-collapsed .card {
+  border: none !important;
+}
+
+.content-col .content-res .card {
+  border: none !important;
+}
+
+.shop_header {
+  margin-bottom: 60px;
+  text-align: center;
+}
+/* modal */
+.modal-header {
+  padding: 6rem 1rem 1rem !important;
+  border: none !important;
+}
+
+.modal.show .modal-dialog {
+  max-width: 100% !important;
+  transform: none !important;
+  top: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.modal-title {
+  font-weight: bolder !important;
+  font-size: 10px !important;
+  color: gray !important;
+}
+
+.modal-body {
+  padding: 1rem 1rem !important;
+}
+
+.modal-footer {
+  padding: 3rem 0rem 5rem 0rem !important;
+  justify-content: flex-start !important;
+}
+
+input {
+  border: none !important;
+  padding: 0 !important;
+  font-size: 41px !important;
+}
+
+.input-group-lg > .btn,
+.input-group-lg > .form-control,
+.input-group-lg > .form-select,
+.input-group-lg > .input-group-text {
+  padding: 0 1rem 0 1rem !important;
+  font-size: 41px !important;
+}
+
+.input-group {
+  height: 60px !important;
+}
+
+.search-icon {
+  font-size: 46px !important;
+  color: darkgray !important;
+  cursor: pointer !important;
+}
+
+.modal-header .btn-close {
+  padding: 0.5rem 0.5rem !important;
+  margin: -0.5rem 1.5rem -0.5rem auto !important;
+}
+
+/* The sidebar menu */
+.sidebar {
+  height: 100vh; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1021; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 100px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+.sidebar .product-categories {
+  list-style: none !;
+}
+.sidebar .product-categories .cat-item {
+  justify-content: space-between;
+  display: flex;
+}
+.sidebar .product-categories .cat-item span {
+  padding: 10px 2rem 0 0;
+}
+.sidebar ul {
+  padding-left: 1rem !important;
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #000;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #ee7b7b;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  margin-top: 1rem;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  background-color: white;
+  cursor: pointer;
+  color: #111;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #f1f1f1;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left 0.5s; /* If you want a transition effect */
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+
+/* //! */
+.show-for-large .product-categories {
+  list-style: none;
+}
+
+.show-for-large .product-categories .cat-item {
+  justify-content: space-between;
+  display: flex;
+  margin: 10px 0px 10px 0px;
+}
+
+.show-for-large .product-categories .cat-item span {
+  padding: 0px 10px 0 0;
+}
+
+.show-for-large ul {
+  padding-left: 2rem !important;
+}
+
+.show-for-large a:hover {
+  color: #ee7b7b;
+}
+
+.list-group-item .uppercase {
+  text-transform: uppercase !important;
+}
+.cat-item .uppercase {
+  text-transform: uppercase !important;
+}
+
+/* //! responsive sidebar */
+@media screen and (max-width: 992px) {
+  .show-for-large {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .img-product {
+    width: auto;
+    height: 200px !important;
+    padding: 5px;
+    object-fit: contain;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .top-sidebar {
+    display: none;
+  }
+}
