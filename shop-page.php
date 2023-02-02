@@ -27,6 +27,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
     <style>
         a {
@@ -123,27 +124,45 @@
 
                     <?php
                     if (($category_n) == "all") { ?>
-                        <div class="card-show container">
-                            <div class="row align-items-end">
-                                <?php
-                                $sql_product = "SELECT * FROM tb_product INNER JOIN tb_picture WHERE tb_product.Product_id = tb_picture.Product_id  ";
-                                $q_product = mysqli_query($conn, $sql_product) or die("Error in query:$sql_product " . mysqli_error($conn));
-                                while ($result_pro = mysqli_fetch_array($q_product)) {
-                                ?>
+                        <div id="loadtable">
+                            <div class="card-show container">
+                                <div class="row align-items-end">
+                                    <?php
+                                    $lastid = '';
+                                    $sql_product = "SELECT * FROM tb_product order by Product_id asc limit 8";
 
-                                    <div class="col-sm-12 col-md-6 col-lg-3 my-3">
-                                        <div class="card_show_dol zoom" style="background-image:linear-gradient(rgb(0,0,0,0.2),rgb(0,0,0,0.7)), url(../../uploads/<?php echo $result_pro['Picture_name']; ?>);">
-                                            <a href="../../view-product/<?php echo $result_pro['product_url']; ?>">
-                                                <h3 class="heading_doll"><?php echo $result_pro['Product_name'];  ?></h3>
-                                                <p class="pricetext">฿ <?php echo $result_pro['Product_price'];  ?></p>
-                                                <span class="span_status"><?php echo $result_pro['Product_status'];  ?></span>
-                                            </a>
+                                    $q_product = mysqli_query($conn, $sql_product) or die("Error in query:$sql_product " . mysqli_error($conn));
+                                    while ($result_pro = mysqli_fetch_array($q_product)) {
+                                        $p_id =  $result_pro['Product_id'];
+                                        $imgcheck = "SELECT * FROM tb_picture WHERE Product_id = ' $p_id'";
+                                        $q_imgcheck = mysqli_query($conn,  $imgcheck) or die("Error in query: $imgcheck " . mysqli_error($conn));
+                                        $re_img = mysqli_fetch_array($q_imgcheck);
+                                    ?>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-3 my-3">
+                                            <div class="card_show_dol zoom" style="background-image:linear-gradient(rgb(0,0,0,0.2),rgb(0,0,0,0.7)), url(../../uploads/<?php echo $re_img['Picture_name']; ?>);">
+                                                <a href="../../view-product/<?php echo $result_pro['product_url']; ?>">
+                                                    <h3 class="heading_doll"><?php echo $result_pro['Product_name'];  ?></h3>
+                                                    <p class="pricetext">฿ <?php echo $result_pro['Product_price'];  ?></p>
+                                                    <span class="span_status"><?php echo $result_pro['Product_status'];  ?></span>
+                                                </a>
+                                            </div>
                                         </div>
+                                    <?php
+                                        $lastid =  $result_pro['Product_id'];
+                                    } ?>
+                                </div>
+                            </div>
+
+                            <div id="remove">
+                                <div style="height:10px;"></div>
+                                <div class="row">
+                                    <div class="col-lg-12 text-center">
+                                        <button type="button" name="loadmore" id="loadmore" data-id="<?php echo $lastid; ?>" class="btn-btn-success">ดูเพิ่มเติม</button>
                                     </div>
-                                <?php } ?>
+                                </div>
                             </div>
                         </div>
-
                     <?php  } else if (isset($tag_n)) { ?>
                         <div class="card-show container">
                             <div class="row align-items-end">
@@ -248,6 +267,30 @@
     </footer>
 
     <?php include_once('assets/scripts.html'); ?>
+    <script>
+        $(document).ready(function() {
+            $(document).on('click', '#loadmore', function() {
+                var lastid = $(this).data('id');
+                $('#loadmore').html('Loading...');
+                $.ajax({
+                    url: "../../load_data.php",
+                    method: "POST",
+                    data: {
+                        lastid: lastid,
+                    },
+                    dataType: "text",
+                    success: function(data) {
+                        if (data != '') {
+                            $('#remove').remove();
+                            $('#loadtable').append(data);
+                        } else {
+                            $('#loadmore').html('No more data to show');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

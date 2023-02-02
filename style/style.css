@@ -414,6 +414,82 @@ p u {
   padding: 10px;
   border-bottom-left-radius: 20px;
   box-shadow: 0 0 10px #a70000;
+  animation-name: animation;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+@-webkit-keyframes animation {
+  0% {
+    background-color: #ff0000;
+  }
+  10.0% {
+    background-color: #ff0078;
+  }
+  20.0% {
+    background-color: #f900ff;
+  }
+  30.0% {
+    background-color: #1700ff;
+  }
+  40.0% {
+    background-color: #0093ff;
+  }
+  50.0% {
+    background-color: #00ff6d;
+  }
+  60.0% {
+    background-color: #17ff00;
+  }
+  70.0% {
+    background-color: #dcff00;
+  }
+  80.0% {
+    background-color: #ffba00;
+  }
+  90.0% {
+    background-color: #ff6500;
+  }
+  100.0% {
+    background-color: #ff0000;
+  }
+}
+
+@keyframes animation {
+  0% {
+    background-color: #ff0000;
+  }
+  10.0% {
+    background-color: #ff0078;
+  }
+  20.0% {
+    background-color: #f900ff;
+  }
+  30.0% {
+    background-color: #1700ff;
+  }
+  40.0% {
+    background-color: #0093ff;
+  }
+  50.0% {
+    background-color: #00ff6d;
+  }
+  60.0% {
+    background-color: #17ff00;
+  }
+  70.0% {
+    background-color: #dcff00;
+  }
+  80.0% {
+    background-color: #ffba00;
+  }
+  90.0% {
+    background-color: #ff6500;
+  }
+  100.0% {
+    background-color: #ff0000;
+  }
 }
 .navbar-moblie,
 .sidenav {
@@ -423,9 +499,31 @@ p u {
 .card-new {
   padding: 20px 0 10px 0 !important;
 }
+.btn-btn-success {
+  padding: 10px 35px;
+  background-color: #f900ff;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  border: 0px !important;
+}
+.btn-btn-success:hover {
+  box-shadow: 0 0 12px #ff0000;
+  transition: 0.3s;
+}
+@media (max-width: 1400px) {
+  .navlinks .box_nav a {
+    font-size: 23px !important;
+  }
+  .navlinks a img.zoom {
+    width: 160px !important;
+    height: 160px !important;
+  }
+}
 @media (max-width: 991px) {
   .main-content {
-    padding: 10px  0px!important;
+    padding: 10px 0px !important;
   }
   .oder-set01 {
     order: 2 !important;
