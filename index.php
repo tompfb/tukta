@@ -105,7 +105,7 @@
                             <h3 class="text-center">Tags</h3>
                             <div class="box-category-all">
                                 <?php
-                                $sql_tag = "SELECT * FROM tag ";
+                                $sql_tag = "SELECT DISTINCT tag.Tag_id,tag.Tag_name FROM tag INNER JOIN tag_log ON tag.Tag_id=tag_log.Tag_id WHERE Tag_product_id!='null'";
                                 $q_tag = mysqli_query($conn, $sql_tag) or die("Error in query: $sql_tag " . mysqli_error($conn));
                                 while ($result_tag = mysqli_fetch_array($q_tag)) {
                                     $tagsname = $result_tag['Tag_name'];
