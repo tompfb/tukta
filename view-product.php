@@ -176,7 +176,7 @@ $Pictures = $pictureFn->pictureGetByProductId($product['Product_id']);
 
         <div class="container py-5">
             <div class="row">
-                <div class="col-8">
+                <div class="col-sm-12 col-md-6 col-lg-8">
                     <div class="border shadow-sm p-3 bg-light">
 
                         <div class="show-img mb-4">
@@ -203,7 +203,7 @@ $Pictures = $pictureFn->pictureGetByProductId($product['Product_id']);
 
                 </div>
 
-                <div class="col-4">
+                <div class="col-sm-12 col-md-6 col-lg-4">
 
 
 

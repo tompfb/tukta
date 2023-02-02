@@ -59,6 +59,23 @@
                 </div>
             </div>
         </nav>
+        <div class="navbar-moblie">
+            <a href="../../">
+                <img data-src="../../img/logo-yimyam.webp" class="lazy img-fluid zoom" width="120" height="120" alt="logo yimyam">
+            </a>
+            <span class="opon_menu" onclick="openNav()">
+                &#8801;
+            </span>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="../../">หน้าแรก</a>
+            <a href="../../shop-page/category/all">ร้านค้า</a>
+            <a href="../../ht-order/">วิธีการชื้อสินค้า</a>
+            <a href="../../notice-of-payment/">วิธีชำระเงิน</a>
+            <a href="../../payment-method/">แจ้งชำระเงิน</a>
+            <a href="../../article/">บทความ</a>
+        </div>
         <img data-src="../../img/banner.webp" class="lazy img-fluid baner-img" width="100%" height="100%" alt="บ้านตุ๊กตายิ้มแย้ม">
     </header>
     <article class="main-content">
@@ -67,7 +84,7 @@
                 <h1 class="heading-flex"><img data-src="../../img/icon-text.webp" class="lazy img-fluid " width="72" height="72" alt="icontext">ร้านค้า</h1>
             </div>
             <div class="row">
-                <div class="col-lg-2">
+                <div class="col-lg-2 oder-set01">
                     <div class="card-cate px-2">
                         <h3 class="tags_store">หมวดหมู่</h3>
                         <br>
@@ -102,7 +119,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-8 store-all">
+                <div class="col-lg-8 store-all oder-set02">
 
                     <?php
                     if (($category_n) == "all") { ?>
@@ -114,7 +131,7 @@
                                 while ($result_pro = mysqli_fetch_array($q_product)) {
                                 ?>
 
-                                    <div class="col-lg-3 my-3">
+                                    <div class="col-sm-12 col-md-6 col-lg-3 my-3">
                                         <div class="card_show_dol zoom" style="background-image:linear-gradient(rgb(0,0,0,0.2),rgb(0,0,0,0.7)), url(../../uploads/<?php echo $result_pro['Picture_name']; ?>);">
                                             <a href="../../view-product/<?php echo $result_pro['product_url']; ?>">
                                                 <h3 class="heading_doll"><?php echo $result_pro['Product_name'];  ?></h3>
@@ -145,7 +162,7 @@
                                     $check_img = mysqli_query($conn, $img) or die("error in query:$img" . mysqli_error($conn));
                                     $check_query_img = mysqli_fetch_array($check_img);
                                 ?>
-                                    <div class="col-lg-3 my-3">
+                                    <div class="col-sm-12 col-md-6 col-lg-3 my-3">
                                         <div class="card_show_dol zoom" style="background-image:linear-gradient(rgb(0,0,0,0.2),rgb(0,0,0,0.7)), url(../../uploads/<?php echo $check_query_img['imgpic']; ?>);">
                                             <a href="../../view-product/<?php echo $result_pro['product_url']; ?>">
                                                 <h3 class="heading_doll"><?php echo $result_pro['Product_name'];  ?></h3>
@@ -165,7 +182,7 @@
                                 $q_product = mysqli_query($conn, $sql_product) or die("Error in query:$sql_product " . mysqli_error($conn));
                                 while ($result_pro = mysqli_fetch_array($q_product)) {
                                 ?>
-                                    <div class="col-lg-3 my-3">
+                                    <div class="col-sm-12 col-md-6 col-lg-3 my-3">
                                         <div class="card_show_dol zoom" style="background-image:linear-gradient(rgb(0,0,0,0.2),rgb(0,0,0,0.7)), url(../../uploads/<?php echo $result_pro['Picture_name']; ?>);">
                                             <a href="../../view-product/<?php echo $result_pro['product_url']; ?>">
                                                 <h3 class="heading_doll"><?php echo $result_pro['Product_name'];  ?></h3>
@@ -180,7 +197,7 @@
                     <?php    }
                     ?>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-2 oder-set03">
                     <h3 class="tags_store">Tags</h3>
                     <div class="box-category-all">
                         <?php
@@ -229,7 +246,7 @@
             </div>
         </div>
     </footer>
-    <!-- <?php include('./footer.php') ?> -->
+
     <?php include_once('assets/scripts.html'); ?>
 </body>
 

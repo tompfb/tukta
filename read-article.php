@@ -46,12 +46,19 @@ $Pictures = $pictureFn->pictureGetByArticleId($article['Article_id']);
 
 
     <style>
+        body{
+            overflow-x: hidden;
+        }
         .article-centered {
 
             text-align: center;
 
         }
 
+        img {
+            max-width: 100%;
+            height: auto;
+        }
 
 
         a {
@@ -64,27 +71,6 @@ $Pictures = $pictureFn->pictureGetByArticleId($article['Article_id']);
 
 
 
-        .navbar-nav .nav-item .nav-link .fas {
-
-            display: none;
-
-        }
-
-
-
-        .navbar-nav .nav-item .nav-link span {
-
-            display: none;
-
-        }
-
-
-
-        .nav-link:hover {
-
-            color: rgb(228, 128, 128);
-
-        }
 
 
 
@@ -93,7 +79,6 @@ $Pictures = $pictureFn->pictureGetByArticleId($article['Article_id']);
             text-align: center;
 
         }
-
 
 
         .show-image {
