@@ -119,7 +119,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> 
                 <div class="col-lg-8 store-all oder-set02">
 
                     <?php

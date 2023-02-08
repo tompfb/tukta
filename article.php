@@ -1,50 +1,27 @@
 <?php
 
 include_once('functions/article-function.php');
-
 include_once('functions/picture-function.php');
-
-
-
 $articleFn = new articleFunction();
-
 $pictureFn = new pictureFunction();
-
 $articles = $articleFn->articleGetAll();
-
-
 
 ?>
 
 <!DOCTYPE html>
-
 <html lang="en">
-
-
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>อ่านบทความ</title>
-
     <link rel="icon" href="../assets/logo.ico" type="image/ico">
-
     <link rel="stylesheet" type="text/css" href="../style/style.css">
-
     <!-- <link rel="stylesheet" type="text/css" href="../style/navbar.css"> -->
-
     <link rel="stylesheet" type="text/css" href="../style/article.css">
 
-
-
     <?php include_once('assets/styles.html'); ?>
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
     <style>
         .entry-content p {
@@ -140,16 +117,13 @@ $articles = $articleFn->articleGetAll();
     </style>
 
 </head>
-
-
-
 <body>
 
     <?php include('./header.php'); ?>
     <h1 class="heading-flex"><img data-src="../img/icon-text.webp" class="lazy img-fluid " width="72" height="72" alt="icontext">บทความ</h1>
     <div class="container">
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-xl-3 g-3">
-            <!-- //! loop card ARTICLE -->
+            
             <?php
             while ($article = $articles->fetch_assoc()) {
                 $Pictures = $pictureFn->pictureGetByArticleId($article['Article_id']);
@@ -162,8 +136,6 @@ $articles = $articleFn->articleGetAll();
                                     <?php
                                     $picture = $Pictures->fetch_assoc()
                                     ?>
-
-
                                     <?php if (isset($picture['Picture_name'])) { ?>
 
                                         <img class="img-product mt-2" <?php echo "src='../uploads/" . $picture['Picture_name'] . "'" ?> alt="" class="card-img-top">
@@ -188,29 +160,14 @@ $articles = $articleFn->articleGetAll();
                             </div>
                             <div class="entry-content mt-3">
                                 <a class="more-link" <?php echo "href='../read-article.php?rId=" . $article["Article_id"] . "'" ?>>Continue Reading</a>
-
                             </div>
-
-                        </div>
-
+                       </div>
                     </div>
-
                 </div>
-
             <?php } ?>
-
         </div>
-
     </div>
-
     <?php include('./footer.php') ?>
-
-
-
     <?php include_once('assets/scripts.html'); ?>
-
 </body>
-
-
-
 </html>
