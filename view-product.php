@@ -28,8 +28,8 @@ $Pictures = $pictureFn->pictureGetByProductId($product['Product_id']);
     <meta name="description" content="<?php echo $product['Product_description']; ?>">
     <meta name="robots" content="index,follow">
 
-    <link rel="alternate" href="https://www.xn--12cai0ebh3gtfbb3dua6s.net/view-product/<?php echo $product_names ?>" hreflang="th-TH" />
-    <link rel="canonical" href="https://www.xn--12cai0ebh3gtfbb3dua6s.net/view-product/<?php echo $product_names ?>" />
+    <link rel="alternate" href="https://xn--12cai0ebh3gtfbb3dua6s.com/view-product/<?php echo $product_names ?>" hreflang="th-TH" />
+    <link rel="canonical" href="https://xn--12cai0ebh3gtfbb3dua6s.com/view-product/<?php echo $product_names ?>" />
 
 
     <link rel="shortcut icon" href="../assets/logo.ico" type="image/x-icon">
@@ -41,7 +41,7 @@ $Pictures = $pictureFn->pictureGetByProductId($product['Product_id']);
     <?php include_once('assets/styles.html'); ?>
 
     <style>
-        .tag {
+        .tag { 
 
             border-radius: 20px;
 

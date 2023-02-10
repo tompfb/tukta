@@ -11,10 +11,19 @@ $articles = $articleFn->articleGetAll();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>อ่านบทความ</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="content-language" content="th" />
+    <meta http-equiv="content-type" content="text/html;" charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="all" />
+    <meta name="Author" content="บ้านตุ๊กตายิ้มแย้ม">
+
+    <link rel="canonical" href="https://xn--12cai0ebh3gtfbb3dua6s.com/article/" />
+    <link rel="alternate" href="https://xn--12cai0ebh3gtfbb3dua6s.com/article/" hreflang="th-TH" />
+
     <link rel="icon" href="../assets/logo.ico" type="image/ico">
     <link rel="stylesheet" type="text/css" href="../style/style.css">
     <!-- <link rel="stylesheet" type="text/css" href="../style/navbar.css"> -->

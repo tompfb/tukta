@@ -12,39 +12,33 @@ $pictureFn = new pictureFunction();
 $article = $articleFn->getArticleByUrlSeo($_GET["Seo_url"])->fetch_assoc();
 $Pictures = $pictureFn->pictureGetByArticleId($article['Article_id']);
 
-
-
+$url_articles_seo = $_GET["Seo_url"]; 
+$encode = urlencode($url_articles_seo);
 ?>
 
 <!DOCTYPE html>
 
 <html lang="en">
 
-
-
 <head>
+    <title><?php echo $article['Article_title']; ?></title>
+    <meta name="title" content="<?php echo $article['Article_title'];  ?>" />
+    <meta name="description" content="<?php echo $article['Seo_description']; ?>">
 
     <meta charset="UTF-8">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="content-language" content="th" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow" />
+    <meta name="Author" content="บ้านตุ๊กตายิ้มแย้ม">
 
-    <title><?php echo $article['Article_title']; ?></title>
-
-
-
+    <link rel="alternate" href="https://xn--12cai0ebh3gtfbb3dua6s.com/<?php echo $encode ?>" hreflang="th-TH" />
+    <link rel="canonical" href="https://xn--12cai0ebh3gtfbb3dua6s.com/<?php echo $encode ?>" />
     <link rel="icon" href="../assets/logo.ico" type="image/ico">
-
     <link rel="stylesheet" type="text/css" href="../style/style.css">
     <link rel="stylesheet" type="text/css" href="../style/article.css">
-
-
-
     <?php include_once('assets/styles.html'); ?>
-
-
-
     <style>
         body{
             overflow-x: hidden;

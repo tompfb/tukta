@@ -1,23 +1,111 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
-
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>บ้านตุ๊กตายิ้มแย้ม จำหน่าย ตุ๊กตาราคาถูก ทั้งขาย ปลีก ส่ง ตุ๊กตาน่ารักๆ จัดส่งฟรีทั่วประเทศ</title>
-    <meta name="description" content="บ้านตุ๊กตายิ้มแย้ม YIMYAM จำหน่าย ตุ๊กตาราคาถูก คิตตี้ หมีพู และอื่นๆอีกมากมาย ทั้งขาย ปลีก ส่ง ทั่วประเทศ" />
+    <title>บ้านตุ๊กตายิ้มแย้ม จำหน่าย ตุ๊กตาราคาถูก ตุ๊กตาหมีตัวใหญ่ ทั้งขาย ปลีก ส่ง จัดส่งฟรีทั่วประเทศ</title>
+    <meta name="title" content="บ้านตุ๊กตายิ้มแย้ม จำหน่าย ตุ๊กตาราคาถูก ตุ๊กตาหมีตัวใหญ่ ทั้งขาย ปลีก ส่ง  จัดส่งฟรีทั่วประเทศ" />
+    <meta name="description" content="บ้านตุ๊กตายิ้มแย้ม YIMYAM จำหน่าย ตุ๊กตาราคาถูก  ตุ๊กตาหมีตัวใหญ่ คิตตี้ หมีพู และอื่นๆอีกมากมาย ทั้งขาย ปลีก ส่ง ทั่วประเทศ" />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta http-equiv="content-language" content="th" />
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <meta name="robots" content="index, follow" />
-    <meta name="revisit-after" content="7 days" />
-    <link rel="canonical" href="https://ตุ๊กตาราคาถูก.net/" />
-    <link rel="alternate" href="https://ตุ๊กตาราคาถูก.net/" hreflang="th-TH" />
+    <meta http-equiv="content-type" content="text/html;" charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots" content="index,follow" />
+    <meta name="Author" content="บ้านตุ๊กตายิ้มแย้ม ">
+    <meta name="googlebots" content="all">
+    <meta name="audience" content="all">
+    <meta name="Rating" content="General">
+    <meta name="distribution" content="Global">
+    <meta name="allow-search" content="yes">
+
+    <meta property="og:locale" content="th_TH" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="บ้านตุ๊กตายิ้มแย้ม จำหน่าย ตุ๊กตาราคาถูก ตุ๊กตาหมีตัวใหญ่ ทั้งขาย ปลีก ส่ง  จัดส่งฟรีทั่วประเทศ" />
+    <meta property="og:description" content="บ้านตุ๊กตายิ้มแย้ม YIMYAM จำหน่าย ตุ๊กตาราคาถูก  ตุ๊กตาหมีตัวใหญ่ คิตตี้ หมีพู และอื่นๆอีกมากมาย ทั้งขาย ปลีก ส่ง ทั่วประเทศ" />
+    <meta property="og:url" content="https://xn--12cai0ebh3gtfbb3dua6s.com/" />
+    <meta property="og:site_name" content="ตุ๊กตาราคาถูก" />
+    <meta property="og:image" content="./img/logo-yimyam.webp" />
+
+    <meta property="twitter:url" content="https://xn--12cai0ebh3gtfbb3dua6s.com/">
+    <meta property="twitter:image" content="./img/logo-yimyam.webp">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="บ้านตุ๊กตายิ้มแย้ม จำหน่าย ตุ๊กตาราคาถูก ตุ๊กตาหมีตัวใหญ่ ทั้งขาย ปลีก ส่ง  จัดส่งฟรีทั่วประเทศ" />
+    <meta name="twitter:description" content="บ้านตุ๊กตายิ้มแย้ม YIMYAM จำหน่าย ตุ๊กตาราคาถูก  ตุ๊กตาหมีตัวใหญ่ คิตตี้ หมีพู และอื่นๆอีกมากมาย ทั้งขาย ปลีก ส่ง ทั่วประเทศ" />
+    <meta name="twitter:site" content="ตุ๊กตาราคาถูก">
+    <meta name="twitter:creator" content="ตุ๊กตาราคาถูก">
+
+    <link rel="canonical" href=" https://xn--12cai0ebh3gtfbb3dua6s.com/" />
+    <link rel="alternate" href=" https://xn--12cai0ebh3gtfbb3dua6s.com/" hreflang="th-TH" />
+
     <link rel="icon" href="assets/logo.ico" type="image/ico">
     <link rel="stylesheet" type="text/css" href="style/style.css">
+
     <?php include_once('assets/styles.html'); ?>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "url": "https://xn--12cai0ebh3gtfbb3dua6s.com/",
+            "logo": "https://xn--12cai0ebh3gtfbb3dua6s.com/img/logo-yimyam.webp"
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "WebPage",
+            "name": "ตุ๊กตาราคาถูก",
+            "speakable": {
+                "@type": "SpeakableSpecification",
+                "xPath": [
+                    "/html/head/title",
+                    "/html/head/meta[@name='description']/@content"
+                ]
+            },
+            "url": "https://xn--12cai0ebh3gtfbb3dua6s.com/"
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Store",
+            "image": [
+                "https://xn--12cai0ebh3gtfbb3dua6s.com/img/logo-yimyam.webp",
+                "https://xn--12cai0ebh3gtfbb3dua6s.com/img/img-tukta-05.webp",
+                "https://xn--12cai0ebh3gtfbb3dua6s.com/img/img-tukta-10.webp"
+            ],
+            "name": "ตุ๊กตาราคาถูก",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "TH"
+            },
+            "url": "https://xn--12cai0ebh3gtfbb3dua6s.com/",
+            "priceRange": "฿฿฿",
+            "telephone": "+6688-087-7288",
+            "openingHoursSpecification": [{
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday",
+                        "Saturday"
+                    ],
+                    "opens": "08:00",
+                    "closes": "23:59"
+                },
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "Sunday",
+                    "opens": "08:00",
+                    "closes": "23:00"
+                }
+            ]
+
+        }
+    </script>
 </head>
 
 

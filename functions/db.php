@@ -1,14 +1,14 @@
 <?php
-$connect = mysqli_connect("localhost", "root", "", "doll") or die("Error server");
+$connect = mysqli_connect("localhost", "xnzwfbsi_12cai0ebh3gtfbb3dua6s", "xn--12cai0ebh3gtfbb3dua6s", "xnzwfbsi_xn--12cai0ebh3gtfbb3dua6s") or die("Error server");
 
 class connectDB
 
 {
     public $conn;
     private $hostName = "localhost";
-    private $userName = "root";
-    private $password = "";
-    private $dbName = "doll";
+    private $userName = "xnzwfbsi_12cai0ebh3gtfbb3dua6s";
+    private $password = "xn--12cai0ebh3gtfbb3dua6s";
+    private $dbName = "xnzwfbsi_xn--12cai0ebh3gtfbb3dua6s";
 
     function __construct()
 
