@@ -2,5 +2,6 @@ User-agent: *
 
 Allow: /
 
-Sitemap: https://xn--12cai0ebh3gtfbb3dua6s.com/sitemap.xml
+Sitemap: https://xn--12cai0ebh3gtfbb3dua6s.com/sitemap-index.xml
+
 
